@@ -1,0 +1,47 @@
+using Microsoft.AspNetCore.Identity;
+using sjekkminhybel.Models;
+using System.Threading.Tasks;
+
+namespace sjekkminhybel.Data
+{
+    public static class ApplicationDbInitializer
+    {
+        public static async Task Initialize(ApplicationDbContext db, UserManager<ApplicationUser> um, RoleManager<IdentityRole> rm)
+        {
+            // Create roles
+            if (!await rm.RoleExistsAsync("Admin"))
+            {
+                var adminRole = new IdentityRole("Admin");
+                await rm.CreateAsync(adminRole);
+            }
+
+            // Add standard users
+            await CreateUser(um, "thomas.hetland@outlook.com", "Admin", "Adminson", "S123456", "Viking2002:", "Admin");
+            await CreateUser(um, "user@uia.no", "User", "Userson", "S123457", "Password1.");
+            await CreateUser(um, "user2@uia.no", "User2", "User2son", "S123457", "Password1.");
+
+            // Save changes made to database
+            db.SaveChanges();
+        }
+
+        private static async Task CreateUser(UserManager<ApplicationUser> um, string email, string password, string role = null)
+        {
+            if (await um.FindByNameAsync(email) == null)
+            {
+                var user = new ApplicationUser()
+                {
+                    UserName = email,
+                    Email = email,
+                    EmailConfirmed = true
+                };
+
+                await um.CreateAsync(user, password);
+
+                if (role != null)
+                {
+                    await um.AddToRoleAsync(user, role);
+                }
+            }
+        }
+    }
+}
