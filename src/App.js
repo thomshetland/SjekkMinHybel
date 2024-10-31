@@ -27,10 +27,10 @@ function App() {
             <Route path="/thanks" element={<Thanks />} />
             <Route path='school/:schoolId' element={<SchoolDetail />} />
             <Route path="/dormReviews/:schoolId/:cityName" element={<DormReviews />} />
+            <Route path='/admin' element={<Admin />} />
 
-            {/* Protect the admin route with ProtectedAdminRoute */}
             <Route element={<ProtectedAdminRoute />}>
-              <Route path='/admin' element={<Admin />} />
+            {/*Protect the admin route with ProtectedAdminRoute */}
             </Route>
           </Routes>
         </div>
