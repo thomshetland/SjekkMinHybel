@@ -1,0 +1,422 @@
+/* Updated reviewStyle.css */
+
+/* Main container for the review content */
+.main-review-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full height of the viewport */
+}
+
+/* Ensure the content grows and pushes the footer to the bottom */
+.review-content {
+  flex: 1; /* Take up remaining space */
+}
+
+.review-container {
+  padding: 0px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Review 1 Styles (remains unchanged) */
+
+/* Input styling */
+.form-group input,
+.form-group select {
+  padding: 18px 22px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #5ac0cf;
+  background-color: #fff;
+}
+
+/* Progress bar styling */
+.progress-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.step {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #ddd;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.step.active {
+  background-color: #5ac0cf;
+}
+
+/* Header styling */
+h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 100px;
+}
+
+.highlight {
+  color: #5ac0cf;
+  font-weight: bold;
+}
+
+/* Form row layout */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  flex-grow: 1; /* Let the form grow to fill the available space */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  margin-bottom: 30px;
+}
+
+.form-group label {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+/* Input styling */
+.form-group input {
+  padding: 18px 22px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #5ac0cf;
+  background-color: #fff;
+}
+
+/* Button row */
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-top: auto; /* Pushes buttons to the bottom */
+  padding-bottom: 40px; /* Adds space between buttons and footer */
+}
+
+.cancel-button, .next-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-button {
+  background-color: #ddd;
+  color: #000;
+}
+
+.cancel-button:hover {
+  background-color: #bbb;
+}
+
+.next-button {
+  background-color: #5ac0cf;
+  color: #fff;
+}
+
+.next-button:hover {
+  background-color: #469bab;
+}
+
+/* Footer styling to ensure it's always at the bottom */
+.footer {
+  background-color: #5ac0cf;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  margin-top: auto; /* Ensures the footer stays at the bottom */
+}
+
+.footer a {
+  color: white;
+  margin: 0 15px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.last {
+  margin-bottom: 160px;
+}
+
+/* REVIEW 2 SPECIFIC STYLES */
+/* REVIEW 2 SPECIFIC STYLES */
+/* REVIEW 2 SPECIFIC STYLES */
+.review2-container .progress-bar {
+  margin-bottom: 50px;
+  padding: 0 40px;  /* Adds padding to the left and right of the progress bar */
+}
+
+.review2-container h2 {
+  margin-bottom: 60px;
+  font-size: 28px; /* Slightly smaller font for balance */
+}
+
+.review2-container .rating-section {
+  margin-top: 30px;
+  padding: 0 60px;  /* Adds padding to the entire content, creating space on both sides */
+  max-width: 1200px; /* Limits the total width for better visual balance */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Style each rating item */
+.review2-container .rating-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;  /* Increased margin for better separation between sections */
+}
+
+/* Text container for aligning text */
+.review2-container .text-container {
+  width: 40%;       /* Slightly reduced width for text to add more white space */
+  text-align: left;
+}
+
+.review2-container .text-container h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;  /* Increased bottom margin for better spacing */
+}
+
+.review2-container .text-container p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Star rating section, aligned to the right */
+.review2-container .rating-stars {
+  display: flex;
+  justify-content: flex-end;
+  width: 40%;        /* Reduced width for better balance between text and stars */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .review2-container .rating-item {
+    flex-direction: column;
+    align-items: flex-start;  /* Stack the text and stars vertically on smaller screens */
+  }
+
+  .review2-container .text-container,
+  .review2-container .rating-stars {
+    width: 100%;              /* Full width for both text and stars on small screens */
+  }
+
+  .review2-container .rating-stars {
+    justify-content: flex-start; /* Align stars to the left on smaller screens */
+  }
+}
+
+/* REVIEW 2 BUTTON STYLES */
+/* Apply the same styles to review2Tilbake and review2Neste */
+.review2Tilbake, .review2Neste {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 22px;
+}
+
+/* Same style as cancel-button */
+.review2Tilbake {
+  background-color: #ddd;
+  color: #000;
+  margin-left: 270px;
+}
+
+.review2Tilbake:hover {
+  background-color: #bbb;
+}
+
+/* Same style as next-button */
+.review2Neste {
+  background-color: #5ac0cf;
+  color: #fff;
+  margin-right: 270px;
+}
+
+.review2Neste:hover {
+  background-color: #469bab;
+}
+
+/* REVIEW 3 SPECIFIC STYLES */
+.review3-container .progress-bar {
+  margin-bottom: 50px;
+  padding: 0 40px;  /* Adds padding to the left and right of the progress bar */
+}
+
+.review3-container h2 {
+  margin-bottom: 40px;
+  font-size: 28px;
+}
+
+/* Input section for the large textarea */
+.input-section {
+  margin-bottom: 40px;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.big-input {
+  width: 100%;
+  height: 150px;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: none; /* Prevent resizing */
+  transition: border-color 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.big-input:focus {
+  outline: none;
+  border-color: #5ac0cf;
+  background-color: #fff;
+}
+
+.word-count {
+  text-align: right;
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* REVIEW 3 BUTTON STYLES */
+/* REVIEW 3 SPECIFIC STYLES */
+.review3-container .progress-bar {
+  margin-bottom: 50px;
+  padding: 0 40px;  /* Adds padding to the left and right of the progress bar */
+}
+
+.review3-container h2 {
+  margin-bottom: 40px;
+  font-size: 28px;
+}
+
+/* Input section for the large textarea */
+.input-section {
+  margin-bottom: 40px;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.big-input {
+  width: 70%;         /* Reduced width for a narrower input field */
+  height: 250px;       /* Increased height to allow for more vertical space */
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: none; /* Prevent resizing */
+  transition: border-color 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.big-input:focus {
+  outline: none;
+  border-color: #5ac0cf;
+  background-color: #fff;
+}
+
+.word-count {
+  text-align: right;
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+  width: 70%;          /* Align the word count width with the textarea */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* REVIEW 3 BUTTON STYLES */
+.review3Tilbake, .review3Fullfør {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 160px;
+}
+
+.review3Tilbake {
+  background-color: #ddd;
+  color: #000;
+  margin-left: 270px;
+}
+
+.review3Tilbake:hover {
+  background-color: #bbb;
+}
+
+.review3Fullfør {
+  background-color: #5ac0cf;
+  color: #fff;
+  margin-right: 270px;
+}
+
+.review3Fullfør:hover {
+  background-color: #469bab;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .input-section {
+    padding: 0 20px;
+  }
+
+  .big-input {
+    width: 100%;
+  }
+
+  .word-count {
+    width: 100%;
+  }
+}

@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.mainContainer {
+  flex: 1; /* Allows the content area to grow and push the footer down */
+  padding: 20px;
+}
+
+/* School container to display columns side by side */
+.schoolContainer {
+  display: flex;
+  width: 100%;
+  height: 100%; /* Ensure the container takes up all available height */
+}
+
+/* School image column */
+.schoolColumn {
+  width: 50%; /* Take up half the width */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+}
+
+.schoolImage {
+  max-width: 100%; /* Ensure the image doesn't exceed its column width */
+  height: auto; /* Keep aspect ratio */
+}
+
+/* Blue column */
+.blueColumn {
+  width: 50%; /* Take up half the width */
+  background-color: #5ac0cf; /* Example blue color */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: flex-start; /* Align content to the left */
+  padding: 30px; /* Add padding around content */
+}
+
+/* Text inside blue column */
+.blueRow {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 20px; /* Space between the text and search bar */
+  text-align: left; /* Align text to the left */
+  width: 100%; /* Ensure the text takes the full width available */
+}
+
+/* Search bar styling */
+.searchBar {
+  width: 40%; /* Make the search bar take up 80% of the available space */
+  padding: 10px;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px;
+}
+
+.searchBar::placeholder {
+  color: #ccc; /* Lighter placeholder text color */
+}
+
+/* Middle container with two rows and two columns layout */
+/* Middle container with two rows and two columns layout */
+/* Middle container with two rows and two columns layout */
+.middleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 auto 40px auto; /* Center the container horizontally and add bottom margin */
+  max-width: 900px; /* Set a maximum width to limit the container size */
+  width: 100%; /* Ensure it takes up 100% of the available width up to the max-width */
+}
+
+/* Middle rows */
+.middleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px; /* Add spacing between image and text */
+}
+
+/* Middle columns styling */
+.middleColumn {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.middleColumn img {
+  max-width: 60%; /* Increased max width to make the images slightly bigger */
+  height: auto;
+  border-radius: 10px; /* Add some rounding to the images */
+}
+
+/* Text styling in middle columns */
+.middleColumn p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: left;
+  line-height: 1.6; /* Make text easier to read */
+}
+
+.middleColumn p:first-child {
+  font-weight: bold;
+  font-size: 22px; /* Highlight the main heading */
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .schoolContainer, .middleRow {
+    flex-direction: column;
+  }
+
+  .searchBar {
+    width: 100%;
+  }
+
+  .middleColumn img {
+    max-width: 100%; /* Full width on smaller screens */
+  }
+
+  .middleColumn {
+    align-items: center;
+    text-align: center;
+  }
+}
+/* Grid layout for school showcase */
+.schoolGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  gap: 24px; /* Spacing between items */
+  padding: 60px;
+  margin: 20px 0;
+}
+
+/* Header styling for each school */
+.schoolCardHeader h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.schoolCardHeader p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* Image container for rounded corners and alignment */
+.schoolCardImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Controls the height of the image container */
+  overflow: hidden;
+  border-radius: 12px; /* Rounded corners for the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow around the image */
+  background-color: #f8f8f8; /* Background color for better contrast */
+}
+
+/* Image styling with rounded corners and centered fit */
+.schoolCardImageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crop the image to cover the container fully */
+  border-radius: 12px; /* Rounded corners for the image itself */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .schoolGrid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .schoolGrid {
+    grid-template-columns: 1fr; /* Single column on very small screens */
+  }
+}
+/* School card styling for clickable effect */
+/* School card styling for clickable effect */
+.schoolCard {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 12px; /* Rounded corners */
+  overflow: hidden; /* Ensure content respects rounded corners */
+}
+
+.schoolCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 20px; /* Ensures the shadow also has rounded corners */
+}

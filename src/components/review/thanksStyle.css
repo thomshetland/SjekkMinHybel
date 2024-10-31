@@ -1,0 +1,75 @@
+/* Main container for the thanks page */
+.thanks-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the page takes full viewport height */
+}
+
+/* Ensure the content grows and pushes the footer down */
+.thanks-content {
+  flex: 1; /* Flex-grow to fill the available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Styling for the header */
+.thanks-content h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #5ac0cf;
+  font-weight: bold;
+}
+
+/* Paragraph styling */
+.thanks-content p {
+  font-size: 18px;
+  color: #666;
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+/* Button styling */
+.go-home-button {
+  padding: 12px 24px;
+  background-color: #5ac0cf;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.go-home-button:hover {
+  background-color: #469bab;
+}
+
+/* Footer styling to ensure it stays at the bottom */
+.footer {
+  background-color: #5ac0cf;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  margin-top: auto; /* Ensures the footer stays at the bottom */
+}
+
+.footer a {
+  color: white;
+  margin: 0 15px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

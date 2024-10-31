@@ -1,0 +1,206 @@
+/* src/pages/adminStyle.css */
+
+.adminContainer {
+  padding: 20px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.adminContainer h1 {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.adminPanel {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar button {
+  padding: 15px;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sidebar button:hover {
+  background-color: #e0e0e0;
+}
+
+.sidebar .active {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.section p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Table Styling */
+.userTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.userTable th, .userTable td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.userTable th {
+  background-color: #f4f4f4;
+  color: #333;
+  font-weight: bold;
+}
+
+.userTable tr:hover {
+  background-color: #f9f9f9;
+}
+
+.userTable td {
+  color: #555;
+}
+/* src/pages/adminStyle.css */
+
+/* Other existing styles */
+
+.userTable th, .userTable td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.userTable th {
+  background-color: #f4f4f4;
+  color: #333;
+  font-weight: bold;
+}
+
+.userTable tr:hover {
+  background-color: #f9f9f9;
+}
+
+.userTable td {
+  color: #555;
+}
+
+.deleteButton {
+  background-color: #FF5722; /* Red color */
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.deleteButton:hover {
+  background-color: #e64a19; /* Darker red on hover */
+}
+/* src/pages/adminStyle.css */
+
+/* Other existing styles */
+
+.reviewTable th, .reviewTable td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.reviewTable th {
+  background-color: #f4f4f4;
+  color: #333;
+  font-weight: bold;
+}
+
+.reviewTable tr:hover {
+  background-color: #f9f9f9;
+}
+
+.reviewTable td {
+  color: #555;
+}
+
+.approveButton {
+  background-color: #4CAF50; /* Green */
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.approveButton:hover {
+  background-color: #388E3C; /* Darker green on hover */
+}
+/* src/pages/adminStyle.css */
+
+/* Other existing styles */
+
+.approveButton {
+  background-color: #4CAF50; /* Green */
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.approveButton:hover {
+  background-color: #388E3C; /* Darker green on hover */
+}
+
+.declineButton {
+  background-color: #FF5722; /* Red color */
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  margin-left: 5px;
+}
+
+.declineButton:hover {
+  background-color: #e64a19; /* Darker red on hover */
+}

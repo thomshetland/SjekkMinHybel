@@ -1,0 +1,168 @@
+/* Full height for the login container with a fresh gradient background */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #5ac0cf 0%, #667eea 100%);
+}
+
+/* Card container for the login form */
+.login-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.login-card:hover {
+  transform: scale(1.02);
+}
+
+/* Welcome text */
+.login-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Form styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Label styling */
+.label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+  text-align: left;
+}
+
+/* Input fields styling */
+.input-field {
+  padding: 0.75rem;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #5ac0cf;
+  background-color: #e9f8fa; /* Light background on focus for a better user experience */
+  outline: none;
+}
+
+/* Error message styling */
+.error-message {
+  color: #e53e3e;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Primary button styling */
+.primary-button {
+  background-color: #5ac0cf;
+  color: #fff;
+  padding: 0.75rem;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.primary-button:hover {
+  background-color: #47a2b1;
+}
+
+.primary-button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+/* Link styling */
+.sign-up-link {
+  font-size: 14px;
+  color: #5ac0cf;
+  font-weight: bold;
+}
+
+.sign-up-link:hover {
+  text-decoration: underline;
+}
+
+/* Divider styling */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.divider-line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.divider-text {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Google button styling */
+.google-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;            /* Full width of container */
+  max-width: 320px;       /* Optional: set a max width for better layout */
+  margin: 0 auto;         /* Center the button horizontally */
+}
+
+.google-button:hover {
+  background-color: #f0f8fc; /* Light background color on hover */
+}
+
+.google-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Back button styling */
+.back-button {
+  font-size: 14px;
+  font-weight: bold;
+  color: #5ac0cf;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: #47a2b1;
+}
