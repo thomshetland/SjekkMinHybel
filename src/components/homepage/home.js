@@ -10,7 +10,7 @@ import './homestyle.css';
 import schoolImage from '../../assets/schoolimage.png';
 import ratingBilde from '../../assets/ratingbilde.png';
 import finnBilde from '../../assets/Finnbilde.png';
-import { useAuth } from '../../authContext/context.js';
+
 
 function Home() {
   const [query, setQuery] = useState("");
