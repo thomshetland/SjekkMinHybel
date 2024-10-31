@@ -14,7 +14,6 @@ import { useAuth } from '../../authContext/context.js';
 
 function Home() {
   const [query, setQuery] = useState("");
-  const { currentUser } = useAuth();
   const navigate = useNavigate();
 
   const [schools, setSchools] = useState([]);
@@ -69,7 +68,7 @@ function Home() {
       <div className='mainContainer'>
         <div className="schoolContainer">
           <div className="schoolColumn">
-            <img src={schoolImage} className='schoolImage' alt="School" />
+            <img src={schoolImage} className='schoolImage' alt="School view" />
           </div>
           <div className="blueColumn">
             <div className="blueRow">
@@ -89,7 +88,7 @@ function Home() {
         <div className="middleContainer">
           <div className="middleRow">
             <div className="middleColumn">
-              <img src={finnBilde} alt="Finn bilde" />
+              <img src={finnBilde} alt="Finn image" />
             </div>
             <div className="middleColumn">
               <p>Usikker på studenthybel?</p>
@@ -103,7 +102,7 @@ function Home() {
               <p>Del hvordan du opplevde din studenthybel. Anmeldelsene er helt anonyme.</p>
             </div>
             <div className="middleColumn">
-              <img src={ratingBilde} alt="Rating bilde" />
+              <img src={ratingBilde} alt="Rating illustration" />
             </div>
           </div>
         </div>
@@ -124,7 +123,7 @@ function Home() {
                 </div>
                 <div className="schoolCardImageContainer">
                   {school.imageURL ? (
-                    <img src={school.imageURL} alt={`${school.shortName || school.id} Image`} className="schoolImage" />
+                    <img src={school.imageURL} alt={`${school.shortName || school.id}`} className="schoolImage" />
                   ) : (
                     <p>No image available</p>
                   )}

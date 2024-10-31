@@ -73,7 +73,6 @@ function SchoolDetail() {
     navigate(`/`);
   };
 
-  // Update handleCityClick to include both schoolId and cityName in the URL
   const handleCityClick = (cityName) => {
     navigate(`/dormReviews/${schoolId}/${cityName}`);
   };
@@ -86,51 +85,49 @@ function SchoolDetail() {
       <Navbar />
 
       <div className="headerImageContainer">
-        {imageURL && <img src={imageURL} alt={`${school?.shortName || schoolId} Image`} className="headerImage" />}
+        {imageURL && <img src={imageURL} alt={school?.shortName || schoolId} className="headerImage" />}
         <div className="headerOverlay">
           <h1 className="schoolTitle">{school?.shortName || schoolId}</h1>
           <p className="schoolLocation">{cities.map(city => city.name).join(", ")}</p>
         </div>
       </div>
 
-
-    <div className='citycontainer'>
-    <div className="backText" onClick={handleBackClick}>
+      <div className='citycontainer'>
+        <div className="backText" onClick={handleBackClick}>
           ← Tilbake
         </div>
 
-      <div className="contentContainer">
-        
-        <div className="associatedCities">
-          <h3>Her finner man skolen i:</h3>
-          {cities.length > 0 ? (
-            <div className="cityGrid">
-              {cities.map(city => (
-                <div
-                  className="cityCard"
-                  key={city.name}
-                  onClick={() => handleCityClick(city.name)}  // Add onClick event
-                  style={{ cursor: 'pointer' }}  // Change cursor to pointer to indicate clickable
-                >
-                  {city.imageURL ? (
-                    <img src={city.imageURL} alt={`${city.name} Image`} className="cityImage" />
-                  ) : (
-                    <div className="cityImagePlaceholder">Ingen bilder tilgjengelige</div>
-                  )}
-                  <p className="cityName">{city.name}</p>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <p>Ingen skoler i denne byen.</p>
-          )}
-        </div>
+        <div className="contentContainer">
+          <div className="associatedCities">
+            <h3>Her finner man skolen i:</h3>
+            {cities.length > 0 ? (
+              <div className="cityGrid">
+                {cities.map(city => (
+                  <div
+                    className="cityCard"
+                    key={city.name}
+                    onClick={() => handleCityClick(city.name)}
+                    style={{ cursor: 'pointer' }} 
+                  >
+                    {city.imageURL ? (
+                      <img src={city.imageURL} alt={city.name} className="cityImage" />
+                    ) : (
+                      <div className="cityImagePlaceholder">Ingen bilder tilgjengelige</div>
+                    )}
+                    <p className="cityName">{city.name}</p>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p>Ingen skoler i denne byen.</p>
+            )}
+          </div>
 
-        <div className="schoolInfo">
-          <h2>Om {school?.shortName || schoolId}</h2>
-          <p>{school?.description || "Ingen beskrivelse tilgjengelig."}</p>
+          <div className="schoolInfo">
+            <h2>Om {school?.shortName || schoolId}</h2>
+            <p>{school?.description || "Ingen beskrivelse tilgjengelig."}</p>
+          </div>
         </div>
-      </div>
       </div>
       <Footer />
     </div>
