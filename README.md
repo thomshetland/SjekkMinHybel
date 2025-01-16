@@ -1,3 +1,5 @@
+NOTE: I had to rebuild the whole entire application to publish it for a interview, which is why I changed PostgreSQL with Firebase. 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
